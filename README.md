@@ -43,6 +43,7 @@ En la siguiente imagen se representa una curva cúbica con un número específic
 	
 ![alt](./imagenes/natural.gif)
 	
+	
 ### Curvas de Hermite
 
 Las curvas de Hermite tienen la característica particular de poseer una tangente específica en cada uno de los puntos de control, con lo cual se determina un control local en cualquier par de puntos. En la implementación, 
@@ -82,7 +83,7 @@ En la imagen posterior, se muestra una curva de Bezier con 8 puntos de control.
 ![alt](./imagenes/bb7.PNG)
 
 
-#### Continuidad:
+### Continuidad:
 
 -*Continuidad de orden cero* _C0_: Esta continuidad se cumple gracias a la unión de las curvas que se unen durante la trayectoria de un punto de control inicial a un punto de control final.
 
