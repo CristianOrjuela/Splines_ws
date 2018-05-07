@@ -32,20 +32,18 @@ Complete la tabla:
 
 ## Discusión
 
-### Implementación de curvas
-
-#### Curvas  Cúbicas Naturales:
+### Curvas  Cúbicas Naturales:
 La representación de las curvas naturales se determinan a través de la implementación de polinomios de tercer orden o polinomios de grado tres y que tienen como punto de corte un punto de control establecido dentro de la escena. Adicionalmente, las curvas cúbicas naturales terminan siendo una representación matemática de un dibujo técnico de una spline original, es decir, que se requieren dos secciones de curvas adyacentes que tengan tanto la primera como 
 la segunda derivada en su frontera común, garantizando y exigigiendo de por sí continuidad C2.
 	
-![alt](./imagenes/ec1.PNG)
+![alt](./imagenes/natural.gif)
 	
 En ese sentido cabe resaltar que a partir del sistema de ecuaciones anterior, se realiza el cálculo de los coeficientes y los parámetros particulares a partir de la construcción de matrices con el fin de encontrar la curva cúbica natural.
 En la siguiente imagen se representa una curva cúbica con un número específico de puntos de control.
 	
 ![alt](./imagenes/ccn.PNG)
 	
-#### Curvas de Hermite
+### Curvas de Hermite
 
 Las curvas de Hermite tienen la característica particular de poseer una tangente específica en cada uno de los puntos de control, con lo cual se determina un control local en cualquier par de puntos. En la implementación, 
 estas curvas se realiza un tipo de interpolación de puntos como una función polinómica en específico. Tienen un factor fundamental que tiene variación entre 0 y 1, y se establece para poder realizar la construcción de la
@@ -60,12 +58,12 @@ Aquí un ejemplo de las curvas de Hermite con 8 puntos de control.
 ![alt](./imagenes/ch.PNG)
 
 
-#### Curvas de Bezier
-
-![alt](./imagenes/c1.gif)
+### Curvas de Bezier
 
 Las curvas de Bezier son igualmente un tipo de interpolación que se realiza a partir de unos puntos de control dados, es decir, que busca encontrar la curva con mayor suavidad que se recorre desde el primer punto de control
 hasta el último, garantizando la continuidad y la variación de acuerdo a la "atracción" de los puntos intermedios de control. 
+
+![alt](./imagenes/c1.gif)
 
 Asimismo, para una mejor implementación de la curva se realiza la implementación del algoritmo de _Casteljau_ con el fin de actualizar los puntos de control en cada iteración. En seguida, la interpretación matemática del algoritmo.
 
@@ -78,6 +76,10 @@ Un ejemplo particular del cálculo de los puntos intermedios viene dado a contin
 En la siguiente imagen se observa un ejemplo de una curva de Bezier cúbica.
 	
 ![alt](./imagenes/bc.PNG)
+
+En la imagen posterior, se muestra una curva de Bezier con 8 puntos de control.
+
+![alt](./imagenes/bb7.PNG)
 
 
 #### Continuidad:
