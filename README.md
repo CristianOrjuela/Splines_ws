@@ -35,8 +35,7 @@ Complete la tabla:
 ### Implementación de curvas
 
 #### Curvas  Cúbicas Naturales:
-La representación de las curvas naturales se determinan a través de la implementación de polinomios de tercer orden o polinomios de grado tres y que tienen como punto de corte un punto de control establecido dentro de la escena.
-Adicionalmente, las curvas cúbicas naturales terminan siendo una representación matemática de un dibujo técnico de una spline original, es decir, que se requieren dos secciones de curvas adyacentes que tengan tanto la primera como 
+La representación de las curvas naturales se determinan a través de la implementación de polinomios de tercer orden o polinomios de grado tres y que tienen como punto de corte un punto de control establecido dentro de la escena. Adicionalmente, las curvas cúbicas naturales terminan siendo una representación matemática de un dibujo técnico de una spline original, es decir, que se requieren dos secciones de curvas adyacentes que tengan tanto la primera como 
 la segunda derivada en su frontera común, garantizando y exigigiendo de por sí continuidad C2.
 	
 ![alt](./imagenes/ec1.PNG)
@@ -63,10 +62,16 @@ Aquí un ejemplo de las curvas de Hermite con 8 puntos de control.
 
 #### Curvas de Bezier
 
+![alt](./imagenes/c1.gif)
+
 Las curvas de Bezier son igualmente un tipo de interpolación que se realiza a partir de unos puntos de control dados, es decir, que busca encontrar la curva con mayor suavidad que se recorre desde el primer punto de control
 hasta el último, garantizando la continuidad y la variación de acuerdo a la "atracción" de los puntos intermedios de control. 
 
-Asimismo, para una mejor implementación de la curva se realiza la implementación del algoritmo de _Casteljau_ con el fin de actualizar los puntos de control en cada iteración.
+Asimismo, para una mejor implementación de la curva se realiza la implementación del algoritmo de _Casteljau_ con el fin de actualizar los puntos de control en cada iteración. En seguida, la interpretación matemática del algoritmo.
+
+![alt](./imagenes/ecuaciona.PNG)
+
+Un ejemplo particular del cálculo de los puntos intermedios viene dado a continuación. 
 
 ![alt](./imagenes/ec3.PNG)
 	
@@ -77,11 +82,11 @@ En la siguiente imagen se observa un ejemplo de una curva de Bezier cúbica.
 
 #### Continuidad:
 
-*Continuidad de orden cero _C0_: Esta continuidad se cumple gracias a la unión de las curvas que se unen durante la trayectoria de un punto de control inicial a un punto de control final.
+-*Continuidad de orden cero* _C0_: Esta continuidad se cumple gracias a la unión de las curvas que se unen durante la trayectoria de un punto de control inicial a un punto de control final.
 
-*Continuidad de primer orden: Este tipo de continuidad se garantiza en las curvas al saber que las primeras derivadas, tangentes a la curva, en los puntos intermedios de cualquier par de puntos en la curva son iguales en su punto de unión.
+-*Continuidad de primer orden*: Este tipo de continuidad se garantiza en las curvas al saber que las primeras derivadas, tangentes a la curva, en los puntos intermedios de cualquier par de puntos en la curva son iguales en su punto de unión.
 
-*Continuidad de segundo orden: Además de cumplir la continuidad de primer orden, se debe cumplir que la variación de los vectores tangentes de a cuerdo a la perspectiva de acercamiento (izquierda o derecha) son iguales. 
+-*Continuidad de segundo orden*: Además de cumplir la continuidad de primer orden, se debe cumplir que la variación de los vectores tangentes de a cuerdo a la perspectiva de acercamiento (izquierda o derecha) son iguales. 
 
 	
 ## Referencias
