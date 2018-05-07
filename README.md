@@ -36,12 +36,12 @@ Complete la tabla:
 La representación de las curvas naturales se determinan a través de la implementación de polinomios de tercer orden o polinomios de grado tres y que tienen como punto de corte un punto de control establecido dentro de la escena. Adicionalmente, las curvas cúbicas naturales terminan siendo una representación matemática de un dibujo técnico de una spline original, es decir, que se requieren dos secciones de curvas adyacentes que tengan tanto la primera como 
 la segunda derivada en su frontera común, garantizando y exigigiendo de por sí continuidad C2.
 	
-![alt](./imagenes/natural.gif)
+![alt](./imagenes/ec1.PNG)
 	
 En ese sentido cabe resaltar que a partir del sistema de ecuaciones anterior, se realiza el cálculo de los coeficientes y los parámetros particulares a partir de la construcción de matrices con el fin de encontrar la curva cúbica natural.
 En la siguiente imagen se representa una curva cúbica con un número específico de puntos de control.
 	
-![alt](./imagenes/ccn.PNG)
+![alt](./imagenes/natural.gif)
 	
 ### Curvas de Hermite
 
